@@ -1,6 +1,6 @@
-# redux thunk middleware
+# redux  middleware for sync actions
 
-Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch and getState as parameters.
+Redux middleware that allows you to write action creators that return a function instead of an action. This middleware can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch and getState as parameters.
 
 An action creator that returns a function to perform asynchronous dispatch:
 
@@ -49,7 +49,7 @@ An action creator that returns a function to perform asynchronous dispatch:
 ```
 const store = createStore(
   reducer,
-  applyMiddleware(createThunkMiddleware({ API })),
+  applyMiddleware(promisableActionMiddleware({ API })),
 );
 
 // action
@@ -90,7 +90,7 @@ Basically this is same combineReducers as in redux but it will not throw an erro
           car: carsReducer,
           user: usersReducer
       }),
-      applyMiddleware(createThunkMiddleware({ API })),
+      applyMiddleware(promisableActionMiddleware({ API })),
     )
 ```
 ## composeReducers(initialState, ...reducers) 
@@ -112,6 +112,6 @@ composeReducers takes initialState as firstArgument and your rootReducers as arg
             mortage: mortageReducer
         }),
       )
-      applyMiddleware(createThunkMiddleware({ API })),
+      applyMiddleware(promisableActionMiddleware({ API })),
     )
 ```

@@ -1,8 +1,8 @@
-import thunkMiddleware from './src/thunk'
+import promisableActionMiddleware from './src/actionsMiddleware'
 import { composeReducers, combineReducers } from './src/redux-helpers'
 
 export {
-  thunkMiddleware,
+  promisableActionMiddleware,
   composeReducers,
   combineReducers,
 }
