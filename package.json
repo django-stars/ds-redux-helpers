@@ -1,7 +1,7 @@
 {
-  "name": "ds-thunk",
+  "name": "ds-redux-helpers",
   "version": "1.0.0",
-  "description": "redux thunk middleware",
+  "description": "redux redux helpers",
   "scripts": {
     "build": "babel src -d . --ignore **/__tests__",
     "clean": "rimraf dist",
@@ -17,7 +17,7 @@
   ],
   "keywords": [
     "redux",
-    "thunk"
+    "middleware"
   ],
   "author": "DjangoStars <info@djangostars.com> (https://github.com/django-stars/)",
   "contributors": [
